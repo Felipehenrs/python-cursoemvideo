@@ -1,0 +1,2 @@
+algo = input("Digite algo: ")
+print(type(algo), "\nÉ só número? {} \nÉ só letra? {}\nÉ número ou letra? {}\nÉ decimal? {}\nTem espaço? {}\nSó tem letras maiúsculas? {}\nSó tem letras minúsculas: {}".format(algo.isnumeric(), algo.isalpha(), algo.isalnum(), algo.isdecimal(), algo.isspace(), algo.isupper(), algo.islower()))
