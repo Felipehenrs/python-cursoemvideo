@@ -1,7 +1,8 @@
 print('\033[1:40mPROGRAMA PARA VER JUROS/DESCONTOS A SER PAGO EM CIMA DE UM PRODUTO\033[m')
 
 valor = str(input('\033[1mQual o valor do produto? (Sem pontos e vírgulas): \033[mR$'))
-if valor.isdigit():
+valor = valor.strip()
+if valor.isdigit() and "." not in valor and "," not in valor:
     valor = float(valor)
     forma = str(input('''\033[1mQual a forma de pagamento?\033[m
      (Digite "\033[1:32m1\033[m" para à vista no dinheiro/cheque)
@@ -9,7 +10,8 @@ if valor.isdigit():
      (Digite "\033[1:31m3\033[m" para até 2x no cartão)
      (Digite "\033[1:35m4\033[m" para 3x ou mais no cartão)
      \033[1mDigite:\033[m '''))
-    if forma.isdigit():
+    forma = forma.strip()
+    if forma.isdigit() and "." not in forma and "," not in forma:
         forma = int(forma)
         if forma <= 0 or forma >= 5:
             print('\033[1:31mOpção inválida de modalidade!\033[m')
@@ -33,6 +35,6 @@ if valor.isdigit():
                     ' O valor de suas prestações mensais será \033[1mR${:.2f}p/mês\033[m, totalizando \033[1mR${:.2f}\033[m .'
                     .format((valor + ((valor / 100) * 20)) / quant, valor + ((valor / 100) * 20)))
     else:
-        print('\033[1:31mDIGITE UM NÚMERO!\033[m')
+        print('\033[1:31mDIGITE APENAS OS VALORES SUGERIDOS (SEM SÍMBOLOS)!\033[m')
 else:
-    print('\033[1:31mDIGITE UM NÚMERO!\033[m')
+    print('\033[1:31mDIGITE UM NÚMERO! (SEM SÍMBOLOS)\033[m')
