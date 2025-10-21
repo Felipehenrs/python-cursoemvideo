@@ -14,4 +14,3 @@ if total == 2:
 else:
     print('\n\033[mEsse número não é primo!\n')
 
-
