@@ -15,10 +15,3 @@ for quantidade_pessoas in range (1, 5):
 
 print(f'A média da idade do grupo é {mediaidade / 4}, o nome do homem mais velho é {maisvelho} e a '
       f'quantidade de mulheres mais novas que 20 anos é {mulheresmaisnovas}.')
-
-
-
-
-
-
-
