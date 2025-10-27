@@ -9,7 +9,7 @@ while True:
     if numero == 0:
         print('0! = 1')
         break
-    print(f'Calculando {numero}! = ', end='')
+    print(f'{numero}! = ', end='')
 
     for c in range(numero, 0, -1):
         print(f'{c}', end='')
