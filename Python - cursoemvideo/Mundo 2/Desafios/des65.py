@@ -1,8 +1,6 @@
 quercontinuar = 'nada'
-acumulador = 0
-soma = 0
-maior = 0
-menor = 0
+acumulador = soma = maior = menor = 0
+
 while quercontinuar != 'n':
     acumulador += 1
     n1 = int(input('Digite um número: '))
